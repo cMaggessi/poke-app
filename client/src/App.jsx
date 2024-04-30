@@ -16,7 +16,7 @@ function App() {
 
   //MAKE SURE TO SET UP YOUR .ENV FILE!!
   //VITE_POKEMON_BASEURL=your-backend-endpoint-goes-here
-  const baseURL = import.meta.env.VITE_POKEMON_BASEURL;
+  const baseURL = `http://localhost:8080/api/v2/pokemon/`;
 
   function upperFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -25,7 +25,9 @@ function App() {
   React.useEffect(() => {
     const fetchDataAsync = async () => {
       try {
-        const data = await fetchData(baseURL);
+        const data = await fetchData(baseURL, {
+          mode: "no-cors",
+        });
         const formattedData = data.map((pokemon) => ({
           ...pokemon,
           name: upperFirstLetter(pokemon.name),

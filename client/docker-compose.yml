@@ -1,6 +1,6 @@
 version: '3.8'
 services:
   app:
-    image: poke-server
+    image: poke-client
     ports:
-      - "8080:8080"
+      - "3000:3000"
