@@ -11,7 +11,7 @@ async function fetchData(apiUrl) {
     const pokemonName = pokemonData.name;
     const pokemonImage = pokemonData.sprites.front_default;
 
-    return { id: pokemonData.id, name: pokemonName, image: pokemonImage, abilities: pokemonData.abilities };
+    return { id: pokemonData.id, name: pokemonName, image: pokemonImage, abilities: pokemonData.abilities, type: pokemonData.types[0].type.name };
   });
 
   return Promise.all(pokemonDetails);
