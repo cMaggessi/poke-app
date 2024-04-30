@@ -17,3 +17,10 @@ Install my-project with npm
 - Search filter
 - Standalone backend application
 
+
+## Tech Stack
+
+**Client:** React, Vite, TailwindCSS, Material UI
+
+**Server:** Node, Express, Shell Scripting, Typescript, tsup
+
