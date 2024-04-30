@@ -1,11 +1,12 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-const PokemonCard = ({ name, image }) => {
+const PokemonCard = ({id, name, image }) => {
+  
   return (
     <Card>
       <CardContent>
         <Typography className="text-center" variant="h5" component="div">
-          {name}
+          {name}({id})
         </Typography>
         <img
           src={image}
